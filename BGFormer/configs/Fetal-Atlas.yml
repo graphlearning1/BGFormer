@@ -1,0 +1,42 @@
+dataset_name: 'Fetal-Atlas'
+data_dir: '/root/data/lzm/single-cell/Fetal-Atlas/adata_preprocessed.h5ad'
+num_classes: 58
+type_key: 'Main_cluster_name'
+log_name:  'Fetal-Atlas.log'
+log_dir: 'logs'
+batch_size: 1000
+fine_batch_size: 64
+pretraining_epoch: 30
+fine_tune_epoch: 100
+hops: 15
+k: 4
+pe_dim: 3
+
+lr: 0.00001
+seed: 2
+num_vq: 64
+n_heads: 4
+
+pred_dim: 128
+hidden_dim: 512
+k_dim: 512
+v_dim: 512
+ffn_dim: 512
+emb_dim: 512
+n_layers: 1
+n_buckets: 14
+n_hashes: 2
+m: 0.996
+
+momentum: 0.9
+weight_decay: 0.0001
+
+use_sim: False
+log_iterval: 10
+prob_feature: 0.1
+prob_edge: 0.5
+tau: 0.8
+alpha: 0.1
+beta: 0.5
+dropout_rate: 0.1
+attention_dropout_rate: 0.1

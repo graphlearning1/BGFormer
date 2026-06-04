@@ -1,0 +1,38 @@
+dataset_name: 'HRCA'
+data_dir: '/root/data/lzm/single-cell/HRCA/adata_preprocessed.h5ad'
+type_key: 'cell_type'
+num_classes: 5
+
+
+lr: 0.00001
+seed: 5
+num_vq: 1024
+n_heads: 8
+
+
+batch_size: 1000
+fine_batch_size: 16
+pretraining_epoch: 30
+fine_tune_epoch: 100
+hops: 15
+k: 4 
+pe_dim: 3
+
+
+pred_dim: 128
+hidden_dim: 512
+k_dim: 512
+v_dim: 512
+ffn_dim: 512
+emb_dim: 512
+n_layers: 1
+n_buckets: 12
+n_hashes: 3
+
+prob_feature: 0.1
+prob_edge: 0.5
+tau: 0.8
+alpha: 0.1
+beta: 0.5
+dropout_rate: 0.1
+attention_dropout_rate: 0.1
